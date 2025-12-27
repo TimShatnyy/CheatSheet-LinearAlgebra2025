@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1766589933.52725 "/Users/timshatnyy/Documents/LaTeX (local)/_Cheat Sheet - Linear Algebra /main.tex" "main.pdf" "main" 1766589935.6495 0
+["pdflatex"] 1766853086.84051 "/Users/timshatnyy/Documents/LaTeX (local)/_Cheat Sheet - Linear Algebra /main.tex" "main.pdf" "main" 1766853088.75537 0
   "/Users/timshatnyy/Documents/LaTeX (local)/_Cheat Sheet - Linear Algebra /main.tex" 1766523931.26851 3880 a20a4897d724fa71983425b3d889717e ""
   "/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1741388039 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/map/fontname/texfonts.map" 1741388039 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -239,7 +239,7 @@
   "/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/web2c/texmf.cnf" 1741388039 42151 79f67285bdd95beca4d137b380b4b9e5 ""
   "/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1741388039 3346124 822af4b3533d914509c9d079ab7ecdd9 ""
   "1.1-vectors.tex" 1765653031.47265 2700 9b8e0c718a40a296d9bd3ba42f83096b ""
-  "2.1-matrices.tex" 1766514949.63564 5472 9da5515c5d985ec7fed40c17b838ad51 ""
+  "2.1-matrices.tex" 1766853086.6643 5473 a28c0a2c7d669052e761581d71ddf83f ""
   "4.1-vectorSpaces.tex" 1766435473.30086 1708 e83aab7d00b2226dde3f9af29107c373 ""
   "4.2-basesAndDimension.tex" 1766508069.97329 2609 ac09908e99a1271f551faaf603725f28 ""
   "4.3-computingThreeFundamentalSubspaces.tex" 1766514520.06516 2078 7b47a9f56d25cffb5e53ee9608f2c236 ""
@@ -259,8 +259,8 @@
   "9.3-singularValueDecomposition.tex" 1766523898.89823 1702 7a98f571d425da98767af9bd2ce20283 ""
   "_notes.tex" 1766516224.79798 3859 5a4648dc1234fb151190d884c349d083 ""
   "algorithms.tex" 1766516241.17695 10328 131adb3803d0e2baaec60b991468597d ""
-  "main.aux" 1766589935.53454 3647 82d3bc27737046b7aff0172ef2f5556f "pdflatex"
-  "main.out" 1766589935.53516 4862 95b551df66f4a6245e0ab70e069d86e3 "pdflatex"
+  "main.aux" 1766853088.64934 3647 82d3bc27737046b7aff0172ef2f5556f "pdflatex"
+  "main.out" 1766853088.65024 4862 95b551df66f4a6245e0ab70e069d86e3 "pdflatex"
   "main.tex" 1766523931.26851 3880 a20a4897d724fa71983425b3d889717e ""
   (generated)
   "main.aux"
