@@ -114,3 +114,155 @@
     \\
     which rearranges by division with a sum of \(b\) to the desired inequality.
 }
+\tsIdea{Matrix Representation of a Linear Map}{
+\[
+    f:\mathbb R^2 \to M_{2\times2}(\mathbb R), \qquad
+    f(a,b)=
+    \begin{pmatrix}
+        a & -b \\
+        b & a
+    \end{pmatrix}
+\]
+
+\[
+    \mathcal B_1=
+    \left\{
+    \begin{pmatrix}1&0\\0&-1\end{pmatrix},
+    \begin{pmatrix}0&-1\\1&0\end{pmatrix},
+    \begin{pmatrix}1&0\\0&0\end{pmatrix}
+    \begin{pmatrix}0&0\\0&1\end{pmatrix}
+    \right\}
+\]
+
+\[
+    \mathcal B_1=\{B_1,B_2,B_3,B_4\}
+\]
+
+\[
+    f(a,b)=aB_1+bB_2+0B_3+2aB_4
+\]
+
+\[
+    [f(a,b)]_{\mathcal B_1}
+    =
+    \begin{pmatrix}
+        a \\
+        b \\
+        0 \\
+        2a
+    \end{pmatrix}
+\]
+
+\[
+    F\begin{pmatrix}a\\b\end{pmatrix}
+    =
+    [f(a,b)]_{\mathcal B_1},
+    \qquad
+    F=
+    \begin{pmatrix}
+        1 & 0 \\
+        0 & 1 \\
+        0 & 0 \\
+        2 & 0
+    \end{pmatrix}
+\]
+
+\[
+    \text{Columns of }F = [f(e_1)]_{\mathcal B_1},\ [f(e_2)]_{\mathcal B_1}
+\]
+}
+\tsIdea{Why Tr\((A) = \sum_{i=1}^{n}\lambda_i \)}{
+    Eigenvalues are the roots of the characteristic polynomial.
+    \\
+    Let $A\in\mathbb{R}^{n\times n}$ with eigenvalues $\lambda_1,\dots,\lambda_n$.
+    The characteristic polynomial is
+    \[
+        \chi_A(z)
+        = (-1)^n\det(A-zI)
+        = \det(zI-A)
+        = \prod_{i=1}^n (z-\lambda_i).
+    \]
+
+    \textbf{Determinant.}
+    Evaluating at $z=0$ gives
+    \[
+        \det(A)=\prod_{i=1}^n \lambda_i.
+    \]
+
+    \textbf{Trace.}
+    Expanding $\chi_A(z)$,
+    \[
+        \prod_{i=1}^n (z-\lambda_i)
+        = z^n - \Big(\sum_{i=1}^n \lambda_i\Big) z^{n-1} + \cdots .
+    \]
+    Hence the coefficient of $z^{n-1}$ is $-\sum_{i=1}^n \lambda_i$.
+
+    On the other hand, using the determinant expansion,
+    \[
+        \det(zI-A)
+        = (z-A_{11})(z-A_{22})\cdots(z-A_{nn}) + \cdots ,
+    \]
+    where the remaining terms correspond to non-identity permutations and have
+    degree at most $z^{n-2}$. Therefore, the coefficient of $z^{n-1}$ is
+    \[
+        -\sum_{i=1}^n A_{ii} = -\operatorname{Tr}(A).
+    \]
+
+    Comparing coefficients yields
+    \[
+        \operatorname{Tr}(A)=\sum_{i=1}^n \lambda_i.
+    \]
+}
+\subsection{Quiz}
+\tsIdea{Determining when matrix returns to identity}{
+    If $A^{m}=I$ and $A^{n}=I$, then
+    \[
+        A^{\gcd(m,n)}=I.
+    \]
+    Proof sketch to template: \\
+    Let $d=\gcd(m,n)$. Then there exist integers $x,y$ with $d=xm+yn$ (B\'ezout).
+    Assuming $A$ is invertible (true in any group; for matrices this means $A\in GL$),
+    \[
+        A^{d}=A^{xm+yn}=(A^{m})^{x}(A^{n})^{y}=I^{x}I^{y}=I.
+    \]
+    \textbf{When can you conclude $A=I$?}
+    You can conclude $A=I$ if $\gcd(m,n)=1$, because then $A^{1}=A=I$.
+    Otherwise, you can only conclude that the order of $A$ divides $\gcd(m,n)$ (i.e., $A$ is a root of unity of that exponent).
+}
+\newline
+\tsIdea{Pairwise linear independence}{
+    Pairwise independence is weaker than (joint) linear independence. \(\Rightarrow\) Linear independence is a global property: checking vectors two at a time is not enough. Collectively, they might still fail independence.
+    \\
+    Geometrically in \(\mathbb{R}^2\): you can have infinitely many vectors that are pairwise non-collinear, but at most two vectors can be linearly independent.
+}
+\newline
+\tsIdea{Linear Dependence Criterion via Dimension}{
+    In a vector space of dimension $n$, any set of more than $n$ vectors is linearly dependent.
+    More formally:
+    \(\tsPoint\) Let $V$ be a vector space with $\dim V = n$.
+    Then any set of $n+1$ (or more) vectors in $V$ is linearly dependent.
+}
+\newline
+\tsIdea{Complex expression and geometric Interpretation}{
+    Using $z\bar z = |z|^2$, the condition reduces to $x^2+y^2=1$, which describes
+    the unit circle.
+}
+\newline
+\tsIdea{SVD validity check}{
+    To verify whether a proposed factorization $A = U\Sigma V^\top$ is a valid SVD,
+    it suffices to check the following:
+    \begin{itemize}[noitemsep, topsep=-1px]
+        \item \textbf{Orthogonality:} $U$ (and $V$) has orthonormal columns, i.e.\ $U^\top U = I$ and $V^\top V = I$;
+        \item \textbf{Singular values:} $\Sigma$ is diagonal with non-negative entries;
+        \item \textbf{Dimensions:} if $A\in\mathbb{R}^{m\times n}$, then $\Sigma\in\mathbb{R}^{m\times n}$.
+    \end{itemize}
+}
+\tsIdea{Invertible matrix and EW}{
+    A matrix is invertible iff $0$ is not an eigenvalue.
+    \(\tsPoint\) $A=A^T
+        \Rightarrow A \text{ has real eigenvalues}
+        \Rightarrow \lambda+i\neq0
+        \Rightarrow \det(A+iI)\neq0
+        \Rightarrow \det(A+iI) \text{ is invertible}
+    $
+}
