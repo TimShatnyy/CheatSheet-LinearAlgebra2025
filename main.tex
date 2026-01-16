@@ -24,6 +24,8 @@
 \usepackage{soul}
 \usepackage{amsmath}
 
+\usepackage{anyfontsize}
+
 
 
 \titleformat{\section}
@@ -152,41 +154,43 @@
 \begin{document}
 % \setcounter{section}{4}
 \begin{multicols}{3}
-    \section{Vectors}
-    \input{1.1-vectors}
-    \section{Matrices}
-    \input{2.1-matrices}
-    \setcounter{section}{3}
-    \section{Four Fundamental Subspaces}
-    \input{4.1-vectorSpaces}
-    \input{4.2-basesAndDimension}
-    \input{4.3-computingThreeFundamentalSubspaces}
-    \input{4.4-allSolutions}
-    \section{Orthogonality and Projections}
-    \input{5.1-orthogonality}
-    \input{5.2-projections}
-    \section{Applications of Orthogonality and Projections}
-    \input{6.1-leastSquaresApproximation}
-    \input{6.2-setOfAllSolutions}
-    \input{6.3-orthonormalBasesAndGramSchmidt}
-    \input{6.4-pseudoinverses}
-    % \newpage
-    \section{The Determinant}
-    \input{7.1-determinants}
-    \section{Eigenvalues and Eigenvectors}
-    \input{8.1-complexNumbers}
-    \input{8.2-introductionToEwEv}
-    \input{8.3-propertiesOfEwEv}
-    % \newpage
-    \section{Diagonizable Matrices, Singular Value Decomposition}
-    \input{9.1-diagonalization}
-    \input{9.2-symmetricMatricesAndSpectralTheorem}
-    \input{9.3-singularValueDecomposition}
-    % \newpage
-    \section*{Algorithms}
-    \input{algorithms}
-    \newpage
-    \section*{Notes from correction}
-    \input{_notes}
+    {\fontsize{7}{7}\selectfont
+        \section{Vectors}
+        \input{1.1-vectors}
+        \section{Matrices}
+        \input{2.1-matrices}
+        \setcounter{section}{3}
+        \section{Four Fundamental Subspaces}
+        \input{4.1-vectorSpaces}
+        \input{4.2-basesAndDimension}
+        \input{4.3-computingThreeFundamentalSubspaces}
+        \input{4.4-allSolutions}
+        \section{Orthogonality and Projections}
+        \input{5.1-orthogonality}
+        \input{5.2-projections}
+        \section{Applications of Orthogonality and Projections}
+        \input{6.1-leastSquaresApproximation}
+        \input{6.2-setOfAllSolutions}
+        \input{6.3-orthonormalBasesAndGramSchmidt}
+        \input{6.4-pseudoinverses}
+        % \newpage
+        \section{The Determinant}
+        \input{7.1-determinants}
+        \section{Eigenvalues and Eigenvectors}
+        \input{8.1-complexNumbers}
+        \input{8.2-introductionToEwEv}
+        \input{8.3-propertiesOfEwEv}
+        % \newpage
+        \section{Diagonizable Matrices, Singular Value Decomposition}
+        \input{9.1-diagonalization}
+        \input{9.2-symmetricMatricesAndSpectralTheorem}
+        \input{9.3-singularValueDecomposition}
+        % \newpage
+        \section*{Algorithms}
+        \input{algorithms}
+        \newpage
+        \section*{Notes from correction}
+        \input{_notes}
+    }
 \end{multicols}
 \end{document}
